@@ -1,0 +1,90 @@
+/*
+ | Tailwind Preflight
+ */
+ @tailwind preflight;
+
+ /*
+  | Tailwind Components
+  */
+ @tailwind components;
+
+ * {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 14px;
+}
+
+html,
+body {
+  @apply .font-sans;
+  @apply .leading-normal;
+  @apply .text-midnight-light;
+
+  overflow-x: hidden;
+}
+
+body {
+  background-image: linear-gradient(-180deg, #0C0A20 0%, #262346 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+::selection {
+  @apply .text-white;
+  @apply .bg-pink;
+}
+
+a {
+  @apply .text-cyan;
+  @apply .no-underline;
+
+  transition: all 200ms ease;
+
+  &:hover {
+    @apply .text-cyan-light;
+  }
+}
+
+.btn {
+  @apply .inline-block;
+  @apply .font-bold;
+  @apply .text-sm;
+  @apply .text-white;
+  @apply .text-center;
+  @apply .tracking-wide;
+  @apply .uppercase;
+  @apply .bg-cyan;
+  @apply .rounded;
+  @apply .shadow;
+
+  width: 250px;
+  height: 45px;
+  line-height: 45px;
+  transition: all 200ms ease;
+
+  &:hover {
+    @apply .text-white;
+    @apply .bg-cyan-light;
+    @apply .shadow-md;
+  }
+}
+
+@screen sm {
+  html {
+      font-size: 16px;
+  }
+}
+
+ /*
+  | Tailwind Utilities
+  */
+ @tailwind utilities;
+
+ /*
+  | Custom Utilities
+  */
+ // @import "common/utilities"

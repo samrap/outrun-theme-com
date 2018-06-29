@@ -1,0 +1,5 @@
+node_modules
+public/main.css
+public/main.js
+public/images
+!public/images/.gitkeep
