@@ -2,3 +2,13 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^outruntheme\.com [NC]
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://outruntheme.com/$1 [R=301,L]
+
+# Gzip common assets...
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+
+# Leverage browser caching...
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 90 days"
+    ExpiresByType text/html "access plus 1 days"
+</IfModule>
